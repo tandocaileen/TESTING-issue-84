@@ -1,28 +1,40 @@
-<p>signup</p>
-<button (click)="successfullySignup = true" *ngIf="!successfullySignup">メールアドレスと確認コードで認証</button>
-<div class="signup" *ngIf="!successfullySignup">
-  <form [formGroup]="signupForm" (ngSubmit)="onSubmitSignup(signupForm.value)">
-    <p>
-      <label>Email: </label>
-      <input type="email" formControlName="email">
-    </p>
-    <p>
-      <label>Password: </label>
-      <input type="password" formControlName="password">
-    </p>
-    <button type="submit">Submit</button>
+<div fxLayoutAlign="center center" fxFlexFill class="main-div" *ngIf="!successfullySignup">
+  <mat-card fxFlex="25">
+    <mat-toolbar color="primary" >
+      <span>Signup Page</span>
+    </mat-toolbar>
+    
+  <form fxLayoutAlign="stretch" fxLayout="column" class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmitSignup(signupForm.value)">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+    <input matInput type="email" placeholder="Enter Email here..."  formControlName="email">
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label>Password</mat-label>
+  <input matInput type= "password" placeholder="Enter Password here..." formControlName="password">
+</mat-form-field>
+<button mat-raised-button color="primary" type="submit" >Signup</button>
+<br>
+<button mat-flat-button color="primary" (click)="successfullySignup = true" *ngIf="!successfullySignup">メールアドレスと確認コードで認証</button>
   </form>
+  </mat-card>
 </div>
-<div class="confirmation" *ngIf="successfullySignup">
-  <form [formGroup]="confirmationForm" (ngSubmit)="onSubmitConfirmation(confirmationForm.value)">
-    <p>
-      <label>Email: </label>
-      <input type="email" formControlName="email">
-    </p>
-    <p>
-      <label>Confirmation Code: </label>
-      <input type="text" formControlName="confirmationCode">
-    </p>
-    <button type="submit">Confirm</button>
+
+<div fxLayoutAlign="center center" fxFlexFill class="main-div" *ngIf="successfullySignup">
+  <mat-card fxFlex="25">
+    <mat-toolbar color="primary" >
+      <span>Confirmation Page</span>
+    </mat-toolbar>
+  <form fxLayoutAlign="stretch" fxLayout="column" class="signup-form" [formGroup]="confirmationForm" (ngSubmit)="onSubmitConfirmation(confirmationForm.value)">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+    <input matInput type="email" placeholder="Enter Email here..."  formControlName="email">
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label>Confirmation Code</mat-label>
+  <input matInput type= "text" placeholder="Enter Confirmation here..." formControlName="confirmationCode">
+</mat-form-field>
+<button mat-raised-button color="primary" type="submit" >Signup</button>
   </form>
+  </mat-card>
 </div>

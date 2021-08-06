@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  amplify: {
+    // 以下がAWS Amplify(Auth)の設定
+    Auth: {
+      identityPoolId: 'ap-northeast-1:b7af109b-f40b-4ab3-b34a-4d9f615cb73b',
+      region: 'ap-northeast-1',
+      userPoolId: 'ap-northeast-1_my3I7YX1L',
+      userPoolWebClientId: '5sutq6e4s1p6qf75lotj0iphn3'
+    }
+  }
 };
 
 /*
