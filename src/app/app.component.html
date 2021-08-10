@@ -2,8 +2,8 @@
   <mat-toolbar color="primary" xLayout="column">
     <a mat-button [routerLink]="['/']">Angular AWS Amplify</a>
    <a mat-button [routerLink]="['/']">ホーム</a>
-    <li *ngIf="!(auth.loggedIn | async)"><a mat-button [routerLink]="['/login']">ログイン</a></li>
-    <li *ngIf="(auth.loggedIn | async)"><a mat-button (click)="onClickLogout()">ログアウト</a></li>
+    <div *ngIf="!(auth.loggedIn | async)"><a mat-button [routerLink]="['/login']">ログイン</a></div>
+    <div *ngIf="(auth.loggedIn | async)"><a mat-button (click)="onClickLogout()">ログアウト</a></div>
     <a mat-button [routerLink]="['/signup']">登録</a>
 </mat-toolbar>
 </nav>
