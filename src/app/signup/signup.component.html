@@ -1,15 +1,17 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-div" *ngIf="!successfullySignup">
   <mat-card fxFlex="25">
-    <mat-toolbar color="primary" >
-      <span>Signup Page</span>
-    </mat-toolbar>
-    
+    <mat-toolbar color="primary" fxLayoutAlign="center center">
+      <span>Sign-up</span>
+  </mat-toolbar>
+    <br>
+    <p style="text-align:center;">
+    <img src="https://media.giphy.com/media/Ri98Ht4Q9hczOeHC1E/giphy.gif" width="100"></p>
   <form fxLayoutAlign="stretch" fxLayout="column" class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmitSignup(signupForm.value)">
-    <mat-form-field>
+    <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
     <input matInput type="email" placeholder="Enter Email here..."  formControlName="email">
   </mat-form-field>
-  <mat-form-field >
+  <mat-form-field appearance="outline">
     <mat-label>Password</mat-label>
   <input matInput type= "password" placeholder="Enter Password here..." formControlName="password">
 </mat-form-field>
@@ -22,15 +24,15 @@
 
 <div fxLayoutAlign="center center" fxFlexFill class="main-div" *ngIf="successfullySignup">
   <mat-card fxFlex="25">
-    <mat-toolbar color="primary" >
+    <mat-toolbar color="primary" fxLayoutAlign="center center">
       <span>Confirmation Page</span>
-    </mat-toolbar>
+  </mat-toolbar>
   <form fxLayoutAlign="stretch" fxLayout="column" class="signup-form" [formGroup]="confirmationForm" (ngSubmit)="onSubmitConfirmation(confirmationForm.value)">
-    <mat-form-field>
+    <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
     <input matInput type="email" placeholder="Enter Email here..."  formControlName="email">
   </mat-form-field>
-  <mat-form-field >
+  <mat-form-field appearance="outline">
     <mat-label>Confirmation Code</mat-label>
   <input matInput type= "text" placeholder="Enter Confirmation here..." formControlName="confirmationCode">
 </mat-form-field>
