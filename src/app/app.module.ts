@@ -24,9 +24,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     LoginComponent,
     SignupComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,

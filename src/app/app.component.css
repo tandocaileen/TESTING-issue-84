@@ -1,0 +1,20 @@
+.title {
+    font-weight:bolder;
+    color: #CEE5D0;
+    font-size: 16px;
+}
+::ng-deep .mat-form-field-outline {
+    color: black !important;
+}
+::ng-deep .mat-form-field-label {
+    color: black !important;
+}
+::ng-deep .mat-input-element {
+    color: black !important;
+} 
+::ng-deep .mat-form-field-empty {
+    color: black !important;
+}
+
+/* Start https://www.cursors-4u.com */ 
+* {cursor: url(https://ani.cursors-4u.net/nature/nat-11/nat1035.cur), auto !important;} /* End https://www.cursors-4u.com */

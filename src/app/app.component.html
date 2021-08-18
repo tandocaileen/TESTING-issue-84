@@ -1,10 +1,11 @@
-<nav>
-  <mat-toolbar color="primary" xLayout="column">
-    <a mat-button [routerLink]="['/']">Angular AWS Amplify</a>
-   <a mat-button [routerLink]="['/']">Home</a>
+<html style="background:linear-gradient(to right, #B5EAEA , #EDF6E5);;"><nav>
+  <mat-toolbar color="primary" flexLayout="column" style="position:fixed;">
+    <a mat-button class="title" [routerLink]="['/']" >Angular AWS Amplify</a>
+    <a mat-button [routerLink]="['/']">Home</a>
     <div *ngIf="!(auth.loggedIn | async)"><a mat-button [routerLink]="['/login']">Log-in</a></div>
     <div *ngIf="(auth.loggedIn | async)"><a mat-button (click)="onClickLogout()">Log-out</a></div>
     <a mat-button [routerLink]="['/signup']">Sign-up</a>
 </mat-toolbar>
 </nav>
 <router-outlet></router-outlet>
+</html>
